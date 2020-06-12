@@ -18,5 +18,7 @@ namespace ShelterHack.Models
         public DbSet<Shelter> Shelters { get; set; }
         public DbSet<ShelterEmployee> ShelterEmployees { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<CatchServiceEmployee> CatchServiceEmployees { get; set; }
+        public DbSet<CatchService> CatchServices { get; set; }
     }
 }

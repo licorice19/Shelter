@@ -8,8 +8,8 @@ namespace ShelterHack.Models
     public class Request
     {
         public int Id { get; set; }
-        public virtual Contract Contract { get; set; }
-        public virtual Shelter DeclarantShelter { get; set; }
+        public Contract Contract { get; set; }
+        public Shelter DeclarantShelter { get; set; }
         public DateTime DateTime { get; set; }
     }
 }

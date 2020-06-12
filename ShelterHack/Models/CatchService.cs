@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 
 namespace ShelterHack.Models
 {
-    public class Shelter
+    public class CatchService
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
-        public IEnumerable<ShelterEmployee> Employees { get; set; }
-        public IEnumerable<Animal> ContainingAnimals { get; set; }
-        public IEnumerable<Contract> PreformingContracts { get; set; }
+        public string Phone { get; set; }
+        public virtual IEnumerable<Animal> CaughtAnimals { get; set; }
     }
 }

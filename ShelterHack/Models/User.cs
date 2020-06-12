@@ -9,6 +9,6 @@ namespace ShelterHack.Models
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public virtual AuthData AuthData { get; set; }
+        public AuthData AuthData { get; set; }
     }
 }
