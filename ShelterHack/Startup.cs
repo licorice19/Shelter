@@ -30,7 +30,7 @@ namespace ShelterHack
             services.AddControllers();
 
             services.AddDbContext<ShelterContext>(options =>
-                options.UseNpgsql("Host=45.141.100.74;Port=5432;Database=main;Username=main;Password=1234")); 
+                options.UseSqlServer(Configuration.GetConnectionString("PostgresConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
