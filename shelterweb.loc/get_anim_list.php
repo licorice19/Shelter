@@ -11,13 +11,14 @@ $result = pg_query($link, $query) or die("Ошибка $.result, ". pg_last_erro
 			for ($i = 0 ; $i < $rows ; ++$i)
 		    {
 		    	$row = pg_fetch_row($result);
-				echo "<form method='POST' action='animal_card.php'><div class = 'col animal col-3-lg'>";
-				    	echo "<input type='hidden' value='$row[0]'>";
-				    	echo "<img class='anim-photo' src = '$row[5]'>";
+				echo "<form method='POST' action='anim_card.php'><div class = 'col animal col-3-lg border'>";
+				    	echo "<input type='hidden' name='id_animal' value='$row[0]'>";
+
+				    	echo "<div class = 'row justify-content-center'><div class = 'col'><img class='anim-photo'  src = 'dog_006.png'></div></div>";
 				    	echo "<p>Кличка: $row[1]</p>";
 				    	echo "<p>Описание: $row[2]</p>";
-				    	echo "<input type='submit' value='Просмотр' class='btn btn-success'>";
-			    echo "</div>";
+				    	echo "<input type='submit' value='Просмотр' class='btn btn-success mx-auto'>";
+			    echo "</div></form>";
 			}
 		}
 		else{
